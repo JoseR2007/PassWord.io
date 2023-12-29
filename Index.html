@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="StylesElement/Styles.css">
+    <title>PassWord.io</title>
+</head>
+<body>
+    <header>
+        <h1>PassWord.io</h1>
+        <b>¡AQUÍ PUEDES CREAR UNA CONTRASEÑA SEGURA!</b>
+    </header>
+
+    <div id="aviso">
+        <h3>Aviso</h3>
+        <b>Las contraseñas con longitud menores a 6 dígitos suelen ser inseguras, no se recomienda su uso.</b>
+    </div>
+
+    <main id="gestor">
+        <section id="ajustar-longitud">
+            <label for="longitud">longitud</label>
+            <select id="longitud">
+                <option value="12">12</option>   
+                <option value="8">8</option>
+                <option value="6">6</option>
+                <option value="4">4</option> 
+            </select>
+        </section>
+        <section id="generador">
+            <input type="text" value=" " id="text-copy" maxlength="16">
+            <div>
+                <button type="button" id="copy">Copy</button>
+                <button type="button" id="generar">Generar</button>
+            </div>
+        </section>
+    </main>
+
+    <hr>
+    <footer>
+        <div>
+            <h3>PassWord.io</h3>
+            <p>Visita mi perfil en GitHub para conocer el código y ver más proyectos.</p>
+            <br>
+            <a href="https://github.com/JoseR2007">GitHub</a>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

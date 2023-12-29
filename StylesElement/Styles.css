@@ -1,0 +1,186 @@
+:root {
+    --color-secundario: #26292B;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    background-color: var(--color-secundario);
+    text-align: center;
+    padding: 1vh;
+    color: aliceblue;
+}
+body {
+    background-color: aliceblue;
+}
+footer {
+    display: flex;
+    font-family: Verdana;
+    background-color: aliceblue;
+    height: auto;
+    color: var(--color-secundario);
+    padding: 1vh;
+    justify-content: center;
+}
+footer a {
+    text-decoration: none;
+    border: 1px solid var(--color-secundario);
+    padding: 1vh;
+    border-radius: 5px;
+    color: aliceblue;
+    background-color: var(--color-secundario);
+    font-weight: bold;
+}
+footer > div {
+    text-align: center;
+}
+code {
+    background-color: rgb(145, 145, 145);
+    padding: 1px;
+    border-radius: 1px;
+}
+header h1 {
+    text-shadow: 1px 2px 1px black;
+}
+
+/* Principal */
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;  
+    height: 80vh;  
+}
+#ajustar-longitud {
+    display: flex;
+    margin-bottom: 1vh;
+}
+#ajustar-longitud label {
+    font-size: 19px;
+}
+#longitud {
+    margin-left: 1vh;
+    border-radius: 5px;
+    padding: 1px;
+    font-size: 18px;
+    font-family: inherit;
+}
+#generador {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+}
+#generador > div {
+    margin-top: 5px;
+}
+#generador > input {
+    padding: 1vh;
+    width: 100%;
+    border-radius: 1vh;
+    border: 1px solid var(--color-secundario);
+    font-weight: bold;
+    outline: none;
+}
+#copy {
+    border-radius: 1vh;
+    border: none;
+    background-color: steelblue;
+    color: aliceblue;
+    text-transform: uppercase;
+    padding: 1vh;
+    font-weight: bold;
+    cursor: pointer;
+    width: 200px;
+    margin-right: 5vh;
+}
+#generar {
+    float: right;
+    border-radius: 1vh;
+    border: none;
+    background-color: steelblue;
+    color: aliceblue;
+    text-transform: uppercase;
+    padding: 1vh;
+    font-weight: bold;
+    transition: 1.25s;
+    cursor: pointer;
+    width: 200px;
+}
+
+/* Alerta de conseña demasiado corta */
+
+#aviso {
+    visibility: hidden;
+    position: absolute;
+    width: 60vh;
+    border-radius: 5px;
+    margin-left: 1vh;
+    margin-top: 1vh;
+    padding: 2px;
+    border: solid rgb(214, 37, 37) 0.2vh;
+    background-color: beige;
+}
+#aviso > b {
+    color: rgb(214, 37, 37);
+}
+
+/* Apartado responsive */
+
+@media screen and (max-width: 600px) {
+    footer > div {
+        width: calc(100% - 10%);
+    }
+    #aviso {
+        width: calc(100% - 10%);
+    }
+}
+@media screen and (max-width: 430px) {
+    header {
+        padding: 2vh;
+    }
+    #aviso {
+        width: calc(100% - 10%);
+    }
+    #copy, #generar {
+        width: 160px;
+    }
+    #longitud {
+        font-size: 16px;
+        padding: 2px;
+    }
+    #ajustar-longitud > label {
+        font-size: 20px;
+    }
+}
+  
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    header {
+        padding: 2vh;
+        font-size: 24px;
+    }
+    #aviso > b {
+        font-size: 24px;
+    }
+    #generador > input {
+        padding: 1vh;
+        font-size: 20px;
+    }
+    #copy, #generar {
+        padding: 1.5vh;
+        font-size: 18px;
+    }
+    #copy {
+        margin-right: 9vh;
+    }
+    #longitud {
+        padding: 2px;
+        font-size: 20px;
+    }
+    #ajustar-longitud > label {
+        font-size: 22px;
+    }
+}
